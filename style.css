@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
 /* RESET & BASE STYLES */
 html {
     scroll-behavior: smooth;
