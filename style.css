@@ -1,4 +1,8 @@
 /* RESET & BASE STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -83,6 +87,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .btn-outline {
@@ -215,7 +220,7 @@ body {
     line-height: 1.4;
 }
 
-/* NEW: GALLERY SECTION CODES */
+/* GALLERY SECTION */
 .gallery {
     width: 100%;
     max-width: 1200px;
@@ -299,24 +304,80 @@ body {
     transform: translateY(0);
 }
 
-/* RESPONSIVE DESIGN (MOBILE ADAPTATION) */
+/* SMARTPHONE & TABLET RESPONSIVE REBOOT */
 @media (max-width: 900px) {
     body {
         padding: 15px;
     }
+
     .header {
+        padding: 12px 20px;
         margin-bottom: 40px;
     }
+
     .nav {
-        display: none;
+        display: none; /* Hides desktop navigation on tablets and phones */
     }
+
     .hero-title {
-        font-size: 36px;
+        font-size: 38px;
+        line-height: 1.2;
     }
+
     .hero-subtitle {
         font-size: 15px;
+        padding: 0 10px;
     }
-    .features, .gallery-grid {
-        grid-template-columns: 1fr; /* Everything stacks vertically on phone screens */
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 60px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    .logo-text small {
+        font-size: 9px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 12px 28px;
+        font-size: 13px;
+        width: 100%; /* Making the main button full width for easier mobile clicks */
+    }
+    
+    .feature-card {
+        padding: 16px;
+        flex-direction: column;
+        text-align: center;
     }
 }
