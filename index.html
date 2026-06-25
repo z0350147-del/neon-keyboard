@@ -16,11 +16,12 @@
         </div>
         <nav class="nav">
             <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Custom Build</a>
-            <a href="#" class="nav-link">Accessories</a>
-            <a href="#" class="nav-link">Shipping</a>
+            <!-- Тепер ці посилання ведуть на конкретні блоки сайту -->
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
         </nav>
-        <button class="btn btn-outline">DESIGN YOURS</button>
+        <!-- Кнопка в шапці веде на галерею робіт -->
+        <button class="btn btn-outline" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">DESIGN YOURS</button>
     </header>
 
     <!-- HERO SECTION -->
@@ -29,7 +30,8 @@
         <p class="hero-subtitle">Craft your ideal build. Limitless customization tailored to your unique style and performance.</p>
         
         <div class="cta-container">
-            <button class="btn btn-primary">ORDER NOW</button>
+            <!-- Головна кнопка тепер плавно скролить до галереї -->
+            <button class="btn btn-primary" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">ORDER NOW</button>
         </div>
 
         <div class="image-container">
@@ -38,7 +40,8 @@
     </main>
 
     <!-- FEATURES SECTION -->
-    <section class="features">
+    <!-- Додали id="features", щоб посилання з шапки знало куди летіти -->
+    <section class="features" id="features">
         <div class="feature-card">
             <div class="feature-icon">🧪</div>
             <div class="feature-info">
@@ -64,8 +67,9 @@
         </div>
     </section>
 
-    <!-- NEW CONTENT: GALLERY SECTION -->
-    <section class="gallery">
+    <!-- GALLERY SECTION -->
+    <!-- Додали id="gallery" для скролу кнопок та посилань -->
+    <section class="gallery" id="gallery">
         <h2 class="section-title">OUR LATEST CREATIONS</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
